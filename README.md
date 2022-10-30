@@ -1,1 +1,1 @@
-# NYCU-intro-to-algorithm
+# Intro. to Algorithm
