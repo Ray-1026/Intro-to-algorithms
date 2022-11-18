@@ -5,8 +5,7 @@ inline bool cmp(string a, string b) {
 	if (a[0] != b[0])
 		return a > b;
 	else {
-		string ab = a + b, ba = b + a;
-		if (ab > ba)
+		if (a + b > b + a)
 			return 1;
 		else
 			return 0;
@@ -16,18 +15,17 @@ inline bool cmp(string a, string b) {
 int main() {
 	ios::sync_with_stdio(false);
 	cin.tie(0);
-	int n, num;
-	string ans = "";
+	int n;
+	string num, ans = "";
 	cin >> n;
 	vector<string> pw;
 	pw.reserve(n);
 	for (int i = 0; i < n; i++) {
 		cin >> num;
-		pw.emplace_back(to_string(num));
+		pw.emplace_back(num);
 	}
 	sort(pw.begin(), pw.end(), cmp);
 	for (string i : pw)
 		ans += i;
-	ans = (ans[0] != '0') ? (ans) : ("0");
-	cout << ans << "\n";
+	cout << ((ans[0] != '0') ? (ans) : ("0"));
 }
