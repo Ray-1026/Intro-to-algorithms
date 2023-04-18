@@ -1,4 +1,4 @@
-# Intro. to Algorithm
+# Intro. to Algorithms
 
 Instructor : 游逸平
 
